@@ -14,11 +14,12 @@ check_klipper()
 
 }
 
-# Step 2: link extension to Klipper
+# Step 2: link extensions to Klipper
 link_extension()
 {
-    echo "Linking extension to Klipper..."
+    echo "Linking extensions to Klipper..."
     ln -sf "${SRCDIR}/dockable_probe.py" "${KLIPPER_PATH}/klippy/extras/dockable_probe.py"
+    ln -sf "${SRCDIR}/gcode_shell_command.py" "${KLIPPER_PATH}/klippy/extras/gcode_shell_command.py"
 }
 
 # Step 3: restarting Klipper
